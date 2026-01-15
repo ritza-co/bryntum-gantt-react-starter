@@ -1,7 +1,12 @@
+import { useRef } from 'react';
+import { BryntumGantt } from '@bryntum/gantt-react';
+import { ganttConfig } from './ganttConfig';
 
 function App() {
+    const gantt = useRef(null);
+
     return (
-        <div>TODO</div>
+        <BryntumGantt ref={gantt} {...ganttConfig} />
     );
 }
 
